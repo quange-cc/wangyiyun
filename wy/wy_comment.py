@@ -5,7 +5,6 @@ from django.db.models import Q
 import json
 import requests
 import time
-import threading
 
 
 def singer_name_id(start_id, end_id):
@@ -119,7 +118,5 @@ def id_repeat(songID):
 
 
 if __name__ == '__main__':
-    t1 = threading.Thread(target=singer_name_id, args=[18001, 18002])
-    t1.start()
-
+    singer_name_id(start_id=18001, end_id=19000)
 
